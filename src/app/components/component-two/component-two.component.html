@@ -1,0 +1,51 @@
+<div class="card" fxLayout.gt-sm="row" fxLayout="column" fxLayoutAlign="space-around stretch" fxLayoutGap="20px">
+    <mat-card fxFlex.gt-sm="30" fxFlex="100">
+        <div fxLayout="column">
+            <div fxLayout="column" class="header">
+                <h5>today's schedule</h5>
+                <p>checkout your schedule</p>
+            </div>
+            <div fxLayout="column" fxLayoutGap="10px">
+                <mat-card *ngFor="let item of scheduleData">
+                    <app-info-card [color]="item.color" [icon]="item.icon" [header]="item.header"
+                        [subHeader]="item.subHeader"></app-info-card>
+
+                    <div *ngIf="item.button" fxLayout="row" fxLayoutAlign="space-around center" fxLayoutGap="10px">
+                        <button class="btn success capsule">Approve</button>
+                        <button class="btn danger capsule">Refuse</button>
+                    </div>
+                </mat-card>
+            </div>
+        </div>
+    </mat-card>
+    <mat-card fxFlex.gt-sm="70" fxFlex="100">
+        <div fxLayout="column">
+            <div fxLayout="row">
+                <div fxFlex="50" fxLayout="column" class="header">
+                    <h5>sales overview</h5>
+                    <p>check monthly sales</p>
+                </div>
+                <div fxFlex="50" fxLayoutAlign="end center">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Select a month</mat-label>
+                        <mat-select>
+                            <mat-option *ngFor="let month of months" value="month">{{month}}</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+            </div>
+            <div fxLayout="row">
+                <div fxFlex="50" fxLayout="column" class="header">
+                    <h2>March 2017</h2>
+                    <p>check monthly sales</p>
+                </div>
+                <div fxFlex="50" fxLayoutAlign="end center">
+                    <p>$3,690</p>
+                </div>
+            </div>
+            <div>
+                <app-table-component [data]="tableData" [columns]="displayedColumns"></app-table-component>
+            </div>
+        </div>
+    </mat-card>
+</div>
