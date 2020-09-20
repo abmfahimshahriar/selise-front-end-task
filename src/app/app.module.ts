@@ -9,6 +9,7 @@ import {MatCardModule} from '@angular/material/card';
 import {MatTableModule} from '@angular/material/table';
 import {MatSelectModule} from '@angular/material/select';
 import {MatChipsModule} from '@angular/material/chips';
+import {MatButtonModule} from '@angular/material/button';
 
 import {FlexLayoutModule} from "@angular/flex-layout";
 import { ComponentOneComponent } from './components/component-one/component-one.component';
@@ -16,6 +17,7 @@ import { ComponentTwoComponent } from './components/component-two/component-two.
 import { ComponentThreeComponent } from './components/component-three/component-three.component';
 import { InfoCardComponent } from './components/info-card/info-card.component';
 import { TableComponentComponent } from './components/table-component/table-component.component';
+import { UserTableComponent } from './components/user-table/user-table.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,8 @@ import { TableComponentComponent } from './components/table-component/table-comp
     ComponentTwoComponent,
     ComponentThreeComponent,
     InfoCardComponent,
-    TableComponentComponent
+    TableComponentComponent,
+    UserTableComponent
   ],
   imports: [
     BrowserModule,
@@ -35,6 +38,7 @@ import { TableComponentComponent } from './components/table-component/table-comp
     MatTableModule,
     MatSelectModule,
     MatChipsModule,
+    MatButtonModule,
     FlexLayoutModule
   ],
   providers: [],

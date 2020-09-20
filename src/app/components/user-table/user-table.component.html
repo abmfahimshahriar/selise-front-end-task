@@ -1,0 +1,41 @@
+<table mat-table [dataSource]="data" class="mat-elevation-z8">
+
+    <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+
+    <!-- Position Column -->
+    <ng-container matColumnDef="person">
+        <th mat-header-cell *matHeaderCellDef> Assigned </th>
+        <td mat-cell *matCellDef="let element">
+            <div class="person-info">
+                <app-info-card [color]="element.person.color" [icon]="element.person.icon"
+                    [header]="element.person.name" [subHeader]="element.person.designation"></app-info-card>
+            </div>
+        </td>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="postName">
+        <th mat-header-cell *matHeaderCellDef> Name </th>
+        <td mat-cell *matCellDef="let element"> {{element.postName}} </td>
+    </ng-container>
+
+    <!-- Weight Column -->
+    <ng-container matColumnDef="priority">
+        <th mat-header-cell *matHeaderCellDef> Priority </th>
+        <td mat-cell *matCellDef="let element">
+            <mat-chip-list>
+                <mat-chip color="warn" selected>{{element.priority}}</mat-chip>
+            </mat-chip-list>
+        </td>
+    </ng-container>
+
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="budget">
+        <th mat-header-cell *matHeaderCellDef> Budget </th>
+        <td mat-cell *matCellDef="let element"> ${{element.budget}}K </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>

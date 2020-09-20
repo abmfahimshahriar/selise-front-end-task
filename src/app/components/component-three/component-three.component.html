@@ -1,1 +1,48 @@
-<p>component-three works!</p>
+<div class="card" fxLayout.gt-sm="row" fxLayout="column" fxLayoutAlign="space-around stretch" fxLayoutGap="20px">
+    <mat-card fxFlex.gt-sm="70" fxFlex="100">
+        <div fxLayout="column">
+            <div fxLayout.gt-xs="row" fxLayout="column">
+                <div fxFlex="50" fxLayout="column" class="header">
+                    <h5>projects of the month</h5>
+                </div>
+                <div fxFlex="50" fxLayoutAlign.gt-sm="end center" fxLayoutAlign="start center">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Select a month</mat-label>
+                        <mat-select>
+                            <mat-option *ngFor="let month of months" value="month">{{month}}</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+            </div>
+            <div>
+                <app-user-table [data]="tableData" [columns]="displayedColumns"></app-user-table>
+            </div>
+        </div>
+    </mat-card>
+    <mat-card fxFlex.gt-sm="30" fxFlex="100">
+        <img mat-card-image
+            src="https://images.unsplash.com/photo-1453928582365-b6ad33cbcf64?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80"
+            alt="photo of work table">
+        <mat-card-content>
+            <h3>Business development of rules</h3>
+            <mat-chip-list>
+                <mat-chip color="primary" selected>Technology</mat-chip>
+            </mat-chip-list>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis,
+                laboriosam praesentium suscipit a repellendus quam fugit ipsa necessitatibus quas mollitia id
+                voluptatum nemo blanditiis sequi, voluptates fuga! Dolore, fuga nam!
+            </p>
+        </mat-card-content>
+        <mat-card-actions fxLayout="row">
+            <div fxFlex="50" fxLayoutAlign="start center">
+                <button mat-button>Read more</button>
+            </div>
+            <div fxFlex="50" fxLayoutAlign="end center">
+                <button mat-button>
+                    <mat-icon>share</mat-icon>
+                </button>
+            </div>
+        </mat-card-actions>
+    </mat-card>
+</div>

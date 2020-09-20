@@ -23,7 +23,7 @@ export class ComponentTwoComponent implements OnInit {
       button: false
     },
     {
-      color: "green",
+      color: "yellow",
       icon: "account_box",
       header: "john doe",
       subHeader: "call today with John doe",
@@ -64,5 +64,5 @@ export class ComponentTwoComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  
 }
