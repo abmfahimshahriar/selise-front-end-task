@@ -1,15 +1,16 @@
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
-import { DashboardComponent } from './components/dashboard/dashboard.component';
 import {MatIconModule} from '@angular/material/icon';
 import {MatCardModule} from '@angular/material/card';
 import {MatTableModule} from '@angular/material/table';
 import {MatSelectModule} from '@angular/material/select';
 import {MatChipsModule} from '@angular/material/chips';
 import {MatButtonModule} from '@angular/material/button';
+import {MatToolbarModule} from '@angular/material/toolbar';
 
 import {FlexLayoutModule} from "@angular/flex-layout";
 import { ComponentOneComponent } from './components/component-one/component-one.component';
@@ -22,13 +23,13 @@ import { UserTableComponent } from './components/user-table/user-table.component
 @NgModule({
   declarations: [
     AppComponent,
-    DashboardComponent,
     ComponentOneComponent,
     ComponentTwoComponent,
     ComponentThreeComponent,
     InfoCardComponent,
     TableComponentComponent,
-    UserTableComponent
+    UserTableComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
@@ -39,6 +40,7 @@ import { UserTableComponent } from './components/user-table/user-table.component
     MatSelectModule,
     MatChipsModule,
     MatButtonModule,
+    MatToolbarModule,
     FlexLayoutModule
   ],
   providers: [],
