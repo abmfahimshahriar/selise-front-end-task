@@ -11,6 +11,7 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatChipsModule} from '@angular/material/chips';
 import {MatButtonModule} from '@angular/material/button';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatMenuModule} from '@angular/material/menu';
 
 import {FlexLayoutModule} from "@angular/flex-layout";
 import { ComponentOneComponent } from './components/component-one/component-one.component';
@@ -41,6 +42,7 @@ import { UserTableComponent } from './components/user-table/user-table.component
     MatChipsModule,
     MatButtonModule,
     MatToolbarModule,
+    MatMenuModule,
     FlexLayoutModule
   ],
   providers: [],
