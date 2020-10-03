@@ -6,8 +6,15 @@
             </button>
             <span>My App</span>
             <span class="example-spacer"></span>
+            <mat-form-field appearance="outline">
+                <mat-label>Select Theme</mat-label>
+                <mat-select (selectionChange)="changeTheme($event)" [(value)]="theme">
+                    <mat-option color="primary" value="light-theme">Light Theme</mat-option>
+                    <mat-option color="primary" value="dark-theme">Dark Theme</mat-option>
+                </mat-select>
+            </mat-form-field>
             <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon"
-                (click)="changeTheme()">
+                (click)="changeTheme($event)">
                 <mat-icon>invert_colors</mat-icon>
             </button>
             <button mat-button [matMenuTriggerFor]="afterMenu">
@@ -61,7 +68,8 @@
 
 </div>
 
-
-<app-component-one></app-component-one>
-<app-component-two></app-component-two>
-<app-component-three></app-component-three>
+<div [class]="theme">
+    <app-component-one></app-component-one>
+    <app-component-two></app-component-two>
+    <app-component-three></app-component-three>
+</div>
